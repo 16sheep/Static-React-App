@@ -1,0 +1,46 @@
+.container nav {
+  background: #bbb;
+}
+ 
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+nav a {
+  color: 333;
+  text-decoration: none;
+}
+ 
+nav a:hover {
+  text-decoration: none;
+}
+
+.active {
+  color: black;
+}
+
+@media only screen and (min-width: 600px) {
+  
+  nav ul li {
+    display: inline-block;
+    padding: 0 20px 0 0;
+  }
+
+}
+
+@media only screen and (max-width: 599px) {
+  
+   nav {
+       position: fixed; /* or choose `absolute` depending on desired behavior*/
+       top: 0;
+       bottom: 0;
+       width: 300px;
+       left: -340px;
+       transition: transform .3s ease-in-out;
+   }
+   #nav:target {
+    transform: translateX(340px);
+  }
+}
